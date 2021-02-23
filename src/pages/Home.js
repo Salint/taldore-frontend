@@ -10,6 +10,10 @@ class Header extends React.Component {
 		return (
 			<header id="home">
 				<Navbar />
+				<section>
+					<h1>An easy-to-use project management system.</h1>
+					<p>That will knock your socks off.</p>
+				</section>
 			</header>
 		);
 	}
