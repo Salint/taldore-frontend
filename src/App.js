@@ -1,11 +1,9 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-class test extends React.Component {
-	render() {
-		return <h1>hello world</h1>;
-	}
-}
+import Home from "./pages/Home";
+
+import "./assets/style/master.css";
 
 class Router extends React.Component {
 
@@ -13,7 +11,7 @@ class Router extends React.Component {
 		return (
 			<BrowserRouter>
 				<Switch>
-					<Route exact path="/" component={test} />
+					<Route exact path="/" component={Home} />
 				</Switch>
 			</BrowserRouter>
 		)
