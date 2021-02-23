@@ -20,7 +20,7 @@ class Navbar extends React.Component {
 				<ul>
 					<li><a href="/privacy">Privacy Policy</a></li>
 					<li><a href="/faq">FAQ</a></li>
-					<li><a href="/faq">Blog</a></li>
+					<li><a href="/blog">Blog</a></li>
 				</ul>
 				<div id="auth">
 					{ 

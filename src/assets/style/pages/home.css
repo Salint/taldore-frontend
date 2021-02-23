@@ -12,15 +12,81 @@ header#home section p {
 	font-size: 30px;
 	font-style: italic;
 }
+section#home-privacy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+}
+section#home-privacy div#privacy-info {
+	width: 400px;
+	margin-right: 50px;
+}
+section#home-privacy div#privacy-info h1 {
+	font-size: 40px;
+}
+section#home-privacy div#privacy-info p {
+	font-size: 20px;
+}
+section#home-privacy div#privacy-info a {
+	color: rgb(0, 153, 255);
+	text-decoration: none;
+}
+section#home-privacy div#privacy-info a:hover {
+	text-decoration: underline;
+}
+section#home-privacy div#connection {
+	margin-left: 50px;
+	display: flex;
+	font-size: 70px;
+	align-items: center;
+}
+section#home-privacy div#connection p {
+	color: rgb(184, 184, 184);
+	animation: glow 2s infinite;
+}
+@keyframes glow {
+	0% {
+		color: rgb(184, 184, 184);
+	}
+	50% {
+		color: black;
+	}
+	100% {
+		color: rgb(184, 184, 184);
+	}
+}
+section#home-privacy div#connection * {
+	margin: 0 10px;
+}
 @media (max-width: 1300px) { 
 	header#home section {
 		text-align: left;
 		margin: 0 100px;
 	}
+	section#home-privacy { 
+		flex-direction: column;
+		justify-content: center;
+	}
+	section#home-privacy div#privacy-info, section#home-privacy div#connection {
+		margin: 0;
+	}
+	section#home-privacy div#connection {
+		margin-top: 40px;
+	}
 }
 @media (max-width: 900px) {
 	header#home section {
 		margin: 0 20px;
-		padding: 50px 0 50px 0;
+		padding: 50px 0 80px 0;
+	}
+	section#home-privacy div#privacy-info {
+		width: 300px;
+	}
+	section#home-privacy div#privacy-info h1 {
+		font-size: 30px;
+	}
+	section#home-privacy div#privacy-info p {
+		font-size: 15px;
 	}
 }

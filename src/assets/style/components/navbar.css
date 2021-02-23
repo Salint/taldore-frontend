@@ -90,14 +90,13 @@ nav div#auth button {
 		left: 0;
 	}
 	nav ul li {
-		margin: 5px 0;	
-		padding: 5px 0;
+		padding: 10px 0;
 	}
 	nav ul li:hover::after {
 		right: 100%;
 	}
 	nav ul li:hover {
-		background: rgb(240, 240, 240);
+		background: rgb(248, 248, 248);
 		width: 100%;
 	}
 	nav ul li a {
