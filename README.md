@@ -6,4 +6,4 @@ Taldore is project management system created by [Salint](https://github.com/Sali
 
 ## Dependencies
 *currently*
-- react-router
+- react-router-dom
