@@ -1,15 +1,7 @@
 header#home {
 	background: rgb(255, 187, 0);
 }
-header#home section {
-	text-align: center;
-	padding: 50px 0 80px 0;
-}
-header#home section h1 {
-	font-size: 40px;	
-}
 header#home section p {
-	font-size: 30px;
 	font-style: italic;
 }
 section#home-privacy {
@@ -127,10 +119,6 @@ section#home-credits div p {
 	font-size: 25px;
 }
 @media (max-width: 1300px) { 
-	header#home section {
-		text-align: left;
-		margin: 0 100px;
-	}
 	section#home-privacy { 
 		flex-direction: column;
 		justify-content: center;
@@ -143,10 +131,6 @@ section#home-credits div p {
 	}
 }
 @media (max-width: 900px) {
-	header#home section {
-		margin: 0 20px;
-		padding: 50px 0 80px 0;
-	}
 	section#home-privacy div#privacy-info {
 		width: 300px;
 	}
