@@ -11,7 +11,7 @@ class Footer extends React.Component {
 			<footer>
 				<h3>Taldore</h3>
 				<ul>
-					<li><a href="/privacy">Privacy Policy</a></li>
+					<li><a href="/signup">Sign Up</a></li>
 					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/blog">Blog</a></li>
 					<li><a href="https://github.com/Salint">GitHub</a></li>
