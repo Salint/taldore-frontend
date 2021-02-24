@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
+import Picture from "../assets/images/salint.jpg";
+
 class Header extends React.Component {
 
 	render() {
@@ -63,6 +65,21 @@ class Tasks extends React.Component {
 	}
 }
 
+class Credits extends React.Component {
+	render() {
+		return (
+			<section id="home-credits">
+				<img src={Picture} alt="Salint"/>
+				<div>
+					<h1>Mohamed "Salint" Abduljawad</h1>
+					<p>Hi! I'm a 16-year old Egyptian programmer.<br />Glad to know someone took a look at this.</p>
+				</div>
+			</section>
+		);
+
+	}
+}
+
 class Home extends React.Component {
 
 	render() {
@@ -71,6 +88,7 @@ class Home extends React.Component {
 				<Header />
 				<Privacy />
 				<Tasks />
+				<Credits />
 			</>
 		)
 	}

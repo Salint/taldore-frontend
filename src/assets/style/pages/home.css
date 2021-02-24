@@ -16,14 +16,14 @@ section#home-privacy {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 100px auto;
+	margin: 150px auto;
 }
 section#home-privacy div#privacy-info {
 	width: 400px;
 	margin-right: 50px;
 }
 section#home-privacy div#privacy-info h1 {
-	font-size: 40px;
+	font-size: 50px;
 }
 section#home-privacy div#privacy-info p {
 	font-size: 20px;
@@ -64,13 +64,13 @@ section#home-tasks {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin: 100px 0;
+	margin: 150px 0;
 }
 section#home-tasks div#tasks-info h1 {
-	font-size: 30px;
+	font-size: 50px;
 }
 section#home-tasks div#tasks-info p {
-	font-size: 20px;
+	font-size: 30px;
 }
 section#home-tasks div#task {
 	border: 3px solid rgb(173, 173, 173);
@@ -79,20 +79,51 @@ section#home-tasks div#task {
 	border-radius: 10px;
 	margin: 20px 0;
 	position: relative;
+	width: 400px;
+}
+section#home-tasks div#task h1 {
+	font-size: 30px;
+}
+section#home-tasks div#task p {
+	font-size: 20px;
 }
 section#home-tasks div#task div#outer {
 	margin: 10px auto 0 auto;
 	width: 100%;
 	border: 2px solid rgb(173, 173, 173);
 	border-radius: 3px;
-	height: 12px;
+	height: 20px;
 	overflow: hidden;
 	position: relative;
 }
 section#home-tasks div#task div#inner {
-	width: 50%;
+	width: 66.66666%;
 	height: 100%;
 	background: linear-gradient(to bottom, rgb(0, 255, 0), rgb(94, 255, 94));
+}
+section#home-credits {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+section#home-credits img {
+	width: 300px;
+	border-radius: 50%;
+	border-bottom: 5px solid orange;
+	border-right: 5px solid orangered;
+	border-left: 5px solid orangered;
+	border-top: 5px solid rgba(0, 0, 0, 0);
+	padding: 20px;
+}
+section#home-credits div {
+	text-align: center;
+	margin: 30px 0;
+}
+section#home-credits div h1 {
+	font-size: 40px;
+}
+section#home-credits div p {
+	font-size: 25px;
 }
 @media (max-width: 1300px) { 
 	header#home section {
@@ -132,8 +163,35 @@ section#home-tasks div#task div#inner {
 	}
 	section#home-tasks div#task {
 		padding: 20px;
+		width: 200px;
 	}
 	section#home-tasks div#task h1 {
 		font-size: 20px;
+	}
+	section#home-tasks div#task p {
+		font-size: 15px;
+	}
+	section#home-tasks div#task div#outer {
+		margin: 10px auto 0 auto;
+		width: 100%;
+		border: 2px solid rgb(173, 173, 173);
+		border-radius: 3px;
+		height: 20px;
+		overflow: hidden;
+		position: relative;
+	}
+	section#home-credits img { 
+		width: 200px;
+		padding: 10px;
+		border-bottom: 2px solid orange;
+		border-right: 2px solid orangered;
+		border-left: 2px solid orangered;
+		border-top: 2px solid rgba(0, 0, 0, 0);
+	}
+	section#home-credits div h1 {
+		font-size: 20px;
+	}
+	section#home-credits div p {
+		font-size: 15px;
 	}
 }
