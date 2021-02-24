@@ -57,5 +57,3 @@ export function FirebaseAuthConsumer({ children }) {
         </AuthContext.Consumer>
     );
 }
-@Salint
- 
