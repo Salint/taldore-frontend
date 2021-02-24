@@ -3,5 +3,9 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;	
+}
+body.unscrollable {
+	height: 100%;
+	overflow: hidden;
 }

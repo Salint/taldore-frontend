@@ -1,6 +1,7 @@
 import React from "react";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import "../assets/style/pages/home.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -89,6 +90,7 @@ class Home extends React.Component {
 				<Privacy />
 				<Tasks />
 				<Credits />
+				<Footer />
 			</>
 		)
 	}

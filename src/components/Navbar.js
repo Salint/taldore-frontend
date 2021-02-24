@@ -9,6 +9,7 @@ class Navbar extends React.Component {
 
 	openNavigation() {
 		document.querySelector("ul").classList.toggle("opened");
+		document.body.classList.toggle("unscrollable");
 	}
 
 	render() {

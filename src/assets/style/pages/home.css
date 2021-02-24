@@ -65,6 +65,7 @@ section#home-tasks {
 	align-items: center;
 	flex-direction: column;
 	margin: 150px 0;
+	z-index: -1;
 }
 section#home-tasks div#tasks-info h1 {
 	font-size: 50px;
