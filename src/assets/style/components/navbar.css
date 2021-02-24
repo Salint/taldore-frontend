@@ -65,7 +65,7 @@ nav div#auth button {
 	cursor: pointer;
 	z-index: 1;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
 	nav div#brand {
 		padding-left: 10px;
 	}
