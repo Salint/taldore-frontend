@@ -43,6 +43,26 @@ class Privacy extends React.Component {
 
 };
 
+class Tasks extends React.Component {
+	render() {
+		return (
+			<section id="home-tasks">
+				<div id="tasks-info">
+					<h1>Keep track of each task.</h1>
+					<p>Let it calculate how much is left!</p>
+				</div>
+				<div id="task">
+					<h1>Add mobile support</h1>
+					<p>66.6%. 2 out of 3 tasks completed.</p>
+					<div id="outer">
+						<div id="inner"></div>
+					</div>
+				</div>
+			</section>
+		);
+	}
+}
+
 class Home extends React.Component {
 
 	render() {
@@ -50,6 +70,7 @@ class Home extends React.Component {
 			<>
 				<Header />
 				<Privacy />
+				<Tasks />
 			</>
 		)
 	}

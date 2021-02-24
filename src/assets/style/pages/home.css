@@ -16,7 +16,7 @@ section#home-privacy {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 50px auto;
+	margin: 100px auto;
 }
 section#home-privacy div#privacy-info {
 	width: 400px;
@@ -59,6 +59,41 @@ section#home-privacy div#connection p {
 section#home-privacy div#connection * {
 	margin: 0 10px;
 }
+
+section#home-tasks {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 100px 0;
+}
+section#home-tasks div#tasks-info h1 {
+	font-size: 30px;
+}
+section#home-tasks div#tasks-info p {
+	font-size: 20px;
+}
+section#home-tasks div#task {
+	border: 3px solid rgb(173, 173, 173);
+	border-bottom: 5px solid rgb(173, 173, 173);
+	padding: 10px 20px;
+	border-radius: 10px;
+	margin: 20px 0;
+	position: relative;
+}
+section#home-tasks div#task div#outer {
+	margin: 10px auto 0 auto;
+	width: 100%;
+	border: 2px solid rgb(173, 173, 173);
+	border-radius: 3px;
+	height: 12px;
+	overflow: hidden;
+	position: relative;
+}
+section#home-tasks div#task div#inner {
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgb(0, 255, 0), rgb(94, 255, 94));
+}
 @media (max-width: 1300px) { 
 	header#home section {
 		text-align: left;
@@ -88,5 +123,17 @@ section#home-privacy div#connection * {
 	}
 	section#home-privacy div#privacy-info p {
 		font-size: 15px;
+	}
+	section#home-tasks div#tasks-info h1 {
+		font-size: 30px;
+	}
+	section#home-tasks div#tasks-info p {
+		font-size: 15px;
+	}
+	section#home-tasks div#task {
+		padding: 20px;
+	}
+	section#home-tasks div#task h1 {
+		font-size: 20px;
 	}
 }
