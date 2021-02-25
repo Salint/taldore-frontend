@@ -15,7 +15,7 @@ class Form extends React.Component {
 					<input type="password" placeholder="Password" id="password" />
 					<button>Log In</button>
 				</div>
-				<p>Don't have an account? <a href="/login">Sign up</a></p>
+				<p>Don't have an account? <a href="/signup">Sign up</a></p>
 			</section>
 		)
 	}
