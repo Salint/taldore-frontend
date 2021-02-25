@@ -1,0 +1,52 @@
+section.auth-form {
+	text-align: center;
+	width: 400px;
+	background: rgb(238, 238, 238);
+	margin: 0 auto;
+	padding: 40px 0;
+	border: 1px solid rgb(228, 228, 228);
+	margin-top: 50px;	
+	border-radius: 5px;
+}
+section.auth-form h1 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+section.auth-form div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+section.auth-form div input {
+	margin: 5px 0;
+	border: none;
+	padding: 10px 15px;
+	font-size: 15px;
+	border-radius: 2px;
+	width: 200px;
+	border: 1px solid rgb(228, 228, 228);
+	border-left: 2px solid rgb(172, 172, 172);
+}
+section.auth-form div button {
+	font-size: 20px;
+	border: none;
+	outline: none;
+	padding: 10px 0px;
+	width: 230px;
+	color: white;
+	background: orange;
+	border-radius: 3px;
+	margin-top: 40px;
+}
+section.auth-form p {
+	margin-top: 20px;
+	font-size: 15px;
+	color: rgb(97, 97, 97);
+}
+section.auth-form p a {
+	color: rgb(0, 153, 255);
+	text-decoration: none;
+}
+section.auth-form p a:hover {
+	text-decoration: underline;
+}
