@@ -12,6 +12,15 @@ section.auth-form h1 {
 	font-size: 40px;
 	margin-bottom: 20px;
 }
+section.auth-form h2.error {
+	color: red;
+	background: rgb(255, 0, 0, 0.2);
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px 30px;
+	border: 2px solid red;
+	border-radius: 3px;
+}
 section.auth-form div {
 	display: flex;
 	flex-direction: column;
@@ -37,6 +46,7 @@ section.auth-form div button {
 	background: orange;
 	border-radius: 3px;
 	margin-top: 40px;
+	cursor: pointer;
 }
 section.auth-form p {
 	margin-top: 20px;
