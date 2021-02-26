@@ -60,3 +60,28 @@ section.auth-form p a {
 section.auth-form p a:hover {
 	text-decoration: underline;
 }
+@media (max-width: 1000px) {
+	section.auth-form {
+		width: 300px;
+	}
+	section.auth-form h1 {
+		font-size: 30px;
+	}
+	section.auth-form h2.error {
+		font-size: 20px;
+		width: 150px;
+		padding: 5px 20px;
+	}
+	section.auth-form div input {
+		font-size: 10px;
+		width: 150px;
+		padding: 10px 10px;
+	}
+	section.auth-form div button {
+		font-size: 15px;
+		width: 150px;
+	}
+	section.auth-form p {
+		font-size: 10px;
+	}
+}
