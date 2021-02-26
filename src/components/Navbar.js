@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 					<a href="/">Taldore</a>
 				</div>
 				<ul>
-					<li><a href="/signup">Sign Up</a></li>
+					<li><a href="/contact">Contact Us</a></li>
 					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/blog">Blog</a></li>
 				</ul>
