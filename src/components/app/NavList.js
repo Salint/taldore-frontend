@@ -18,10 +18,10 @@ class NavList extends React.Component {
 					</div>
 				</div>
 				<ul id="app-navigation">
-					<li><a href="/app/"><FontAwesomeIcon icon={faMap} /> Projects</a></li>
-					<li><a href="/app/"><FontAwesomeIcon icon={faBook} /> Sticky Notes</a></li>
-					<li><a href="/app/"><FontAwesomeIcon icon={faCog} /> Settings</a></li>
-					<li><a href="/app/"><FontAwesomeIcon icon={faHome} /> Placeholder</a></li>
+					<li><a href="/app/"><FontAwesomeIcon icon={faMap} /> <p>Projects</p></a></li>
+					<li><a href="/app/"><FontAwesomeIcon icon={faBook} /> <p>Sticky Notes</p></a></li>
+					<li><a href="/app/"><FontAwesomeIcon icon={faCog} /> <p>Settings</p></a></li>
+					<li><a href="/app/"><FontAwesomeIcon icon={faHome} /> <p>Placeholder</p></a></li>
 				</ul>
 			</section>
 		)
