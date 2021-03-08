@@ -20,7 +20,7 @@ nav div#brand {
 nav ul {
 	list-style-type: none;
 	display: flex;
-	flex: 1;
+	flex: 2;
 	justify-content: center;
 	align-items: center;
 }

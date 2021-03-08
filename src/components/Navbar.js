@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AuthService from "../services/AuthService";
 
 import "../assets/style/components/navbar.css";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -14,27 +15,30 @@ class Navbar extends React.Component {
 
 	render() {
 		return (
-			<nav>
-				<div id="brand">
-					<a href="/">Taldore</a>
-				</div>
-				<ul>
-					<li><a href="/contact">Contact Us</a></li>
-					<li><a href="/faq">FAQ</a></li>
-					<li><a href="/blog">Blog</a></li>
-				</ul>
-				<div id="auth">
-					<AuthProvider>
+			<AuthProvider>
+				<nav>
+					<div id="brand">
+						<a href="/">Taldore</a>
+					</div>
+					<ul>
+						<li><a href="/contact">Contact Us</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/blog">Blog</a></li>
 						<IfFirebaseAuthed>
-							<a href="/projects">Open</a>
+							<li><a href="/" onClick={() => AuthService.logOut()}>Log Out</a></li>
 						</IfFirebaseAuthed>
-						<IfFirebaseUnAuthed>
-							<a href="/login/">Login</a> 
-						</IfFirebaseUnAuthed>
-						<button onClick={this.openNavigation}><FontAwesomeIcon icon={faBars} /></button>
-					</AuthProvider>
-				</div>
-			</nav>
+					</ul>
+					<div id="auth">
+							<IfFirebaseAuthed>
+								<a href="/projects">Open</a>
+							</IfFirebaseAuthed>
+							<IfFirebaseUnAuthed>
+								<a href="/login/">Login</a>
+							</IfFirebaseUnAuthed>
+							<button onClick={this.openNavigation}><FontAwesomeIcon icon={faBars} /></button>
+					</div>
+				</nav>
+			</AuthProvider>
 		)
 	}
 
