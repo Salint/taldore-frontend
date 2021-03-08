@@ -12,7 +12,7 @@ class Projects extends React.Component {
 			<section id="dashboard">
 				<h1>Project List</h1>
 				<section id="project-list">
-					<div class="project">
+					<div className="project">
 						<h2>Project 1</h2>
 						<h3>Project description placeholder here.</h3>
 						<p>1 Member</p>
