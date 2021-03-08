@@ -6,6 +6,30 @@ section#dashboard {
 section#dashboard h1 {
 	font-size: 50px;
 }
+section#dashboard h3.loading {
+	font-size: 100px;
+	color: #c6c6c6;
+	text-align: center;
+	animation: loadingRotate 1s infinite;
+}
+@keyframes loadingRotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+}
+section#dashboard h3.error {
+	font-size: 30px;
+	color: red;
+	text-align: center;
+}
+section#dashboard h3.info {
+	font-size: 20px;
+	color: grey;
+	margin-top: 40px;
+}
 section#project-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
