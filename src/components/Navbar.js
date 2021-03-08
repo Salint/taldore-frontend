@@ -26,7 +26,7 @@ class Navbar extends React.Component {
 				<div id="auth">
 					<AuthProvider>
 						<IfFirebaseAuthed>
-							<a href="/app/projects">Open</a> 
+							<a href="/projects">Open</a>
 						</IfFirebaseAuthed>
 						<IfFirebaseUnAuthed>
 							<a href="/login/">Login</a> 
