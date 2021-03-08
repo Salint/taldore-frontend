@@ -1,9 +1,7 @@
 import React from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
 import { Redirect } from "react-router-dom";
 import Footer from "../components/Footer";
+import AuthService from "../services/AuthService";
 
 import "../assets/style/pages/form.css"
 
@@ -11,7 +9,6 @@ class Form extends React.Component {
 
 	constructor(props) {
 		super(props);
-
 
 		this.state = {
 			error: "",
@@ -45,48 +42,22 @@ class Form extends React.Component {
 		this.setState({
 			loading: true
 		});
-		if(this.state.inputs.email.length < 1 ||
-			this.state.inputs.username.length < 1 ||
-			this.state.inputs.password.length < 1 || 
-			this.state.inputs.passwordConfirm.length < 1) {
-			this.setState({
-				error: "Please fill out all the forms"
-			});
-			this.setState({
-				loading: false
-			});
-		}
-		else if(this.state.inputs.password !== this.state.inputs.passwordConfirm) {
-			this.setState({
-				error: "Both passwords do not match"
-			});
-			this.setState({
-				loading: false
-			});
-		}
-		else {
 
-			firebase.auth().createUserWithEmailAndPassword(
-
-				this.state.inputs.email, 
-				this.state.inputs.username
-				
-			).then(userCredentials => {
-
-				firebase.firestore().collection("users").doc(userCredentials.user.uid).set({
-					username: this.state.inputs.username
-				});
-
+		(async () => {
+			try {
+				await AuthService.signUp(this.state.inputs.username, this.state.inputs.email, this.state.inputs.password, this.state.inputs.passwordConfirm);
 				this.setState({
+					loading: false,
 					success: true
 				});
-
-			}).catch(error => {
+			}
+			catch(error) {
 				this.setState({
-					error: error.message
+					error: error.message,
+					loading: false
 				});
-			});
-		}
+			}
+		})();
 
 	}
 
