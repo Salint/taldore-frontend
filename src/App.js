@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
-import AppDashboard from "./pages/app/Dashboard";
+import Dashboard from "./pages/Dashboard";
 
 import "./assets/style/master.css";
 
@@ -18,7 +18,7 @@ class Router extends React.Component {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/signup" component={Signup} />
 					<Route exact path="/login" component={Login} />
-					<Route exact path="/app/projects" component={AppDashboard} />
+					<Route exact path="/projects" component={Dashboard} />
 				</Switch>
 			</BrowserRouter>
 		)

@@ -14,7 +14,7 @@ section.auth-form h1 {
 }
 section.auth-form h2.error {
 	color: red;
-	background: rgb(255, 0, 0, 0.2);
+	background: rgba(255, 0, 0, 0.2);
 	width: 200px;
 	margin: 0 auto;
 	padding: 10px 30px;
