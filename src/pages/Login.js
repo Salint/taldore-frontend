@@ -1,12 +1,10 @@
 import React from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
 import { Redirect } from "react-router-dom";
+import AuthService from "../services/AuthService";
 
 import Footer from "../components/Footer";
 
-import "../assets/style/pages/form.css"
-import AuthService from "../services/AuthService";
+import "../assets/style/pages/form.css";
 
 class Form extends React.Component {
 
