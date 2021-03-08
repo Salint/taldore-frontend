@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import Footer from "../components/Footer";
 
 import "../assets/style/pages/form.css"
+import AuthService from "../services/AuthService";
 
 class Form extends React.Component {
 
@@ -41,28 +42,32 @@ class Form extends React.Component {
 
 	loginAccount() {
 
-		if(this.state.inputs.email.length < 1 ||
-			this.state.inputs.password.length < 1) {
-			this.setState({
-				error: "Please fill out all the forms",
-				loading: false
-			});
-		}
-		else {
+		this.setState({
+			loading: true
+		});
 
-			firebase.auth().signInWithEmailAndPassword(this.state.inputs.email, this.state.inputs.password).then(() => {
+		(async () => {
+
+			try {
+
+				await AuthService.logIn(this.state.inputs.email, this.state.inputs.password);
 
 				this.setState({
-					success: true
+					success: true,
+					loading: false,
+					error: ""
 				});
 
-			}).catch(error => {
+			}
+			catch(error) {
 				this.setState({
+					loading: false,
 					error: error.message
 				});
-			});
+			}
 
-		}
+		})();
+
 
 	}
 

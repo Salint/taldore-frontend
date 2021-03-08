@@ -31,6 +31,31 @@ class AuthService {
 
 	}
 
+	static async logIn(email, password) {
+
+		if (email.length < 1 ||
+			password.length < 1) {
+
+			throw new Error("Some fields are empty");
+		} else {
+
+			try {
+
+				await firebase.auth().signInWithEmailAndPassword(email, password);
+
+			}
+			catch(error) {
+				throw error;
+			}
+		}
+	}
+
+	static async logOut() {
+
+		await firebase.auth().signOut();
+
+	}
+
 }
 
 export default AuthService;
