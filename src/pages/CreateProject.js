@@ -9,6 +9,35 @@ import "../assets/style/pages/create_project.css"
 
 class Prompt extends React.Component {
 
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			error: "",
+			loading: false,
+			success: false,
+			inputs: {
+				name: "",
+				description: ""
+			}
+		}
+
+		this.handleInputChange = this.handleInputChange.bind(this);
+	}
+
+	handleInputChange({ target }) {
+
+		this.setState(prev => ({
+			inputs: {
+				...prev.inputs,
+				[target.name]: target.value
+			}
+		}));
+
+
+	}
+
+
 	render() {
 
 		return (
@@ -24,15 +53,29 @@ class Prompt extends React.Component {
 							<div>
 								<label>Project Name:</label>
 								<br />
-								<input type="text" name="name" placeholder="super-awesome-game" />
+								<input
+									type="text"
+									name="name"
+									placeholder="super-awesome-game"
+									disabled={this.state.pending}
+									onChange={this.handleInputChange}
+								/>
 							</div>
 							<div>
 								<label>Description:</label>
 								<br />
-								<textarea name="description" placeholder="super-awesome-game is a game that is super awesome but also a game." rows={5} />
+								<textarea
+									name="description"
+									placeholder="super-awesome-game is a game that is super awesome but also a game."
+									rows={5}
+									disabled={this.state.pending}
+									onChange={this.handleInputChange}
+								/>
 							</div>
 						</section>
-						<button>Create Project</button>
+						<button
+							disabled={this.state.pending}
+						>Create Project</button>
 					</IfFirebaseAuthed>
 				</AuthProvider>
 			</section>
