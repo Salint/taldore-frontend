@@ -50,6 +50,7 @@ class Projects extends React.Component {
 		return (
 			<section id="dashboard">
 				<h1>Project List</h1>
+				<a href="/projects/create" id="create">Create a Project</a>
 				{ this.state.pending && <h3 className="loading"><FontAwesomeIcon icon={faSyncAlt} /></h3>}
 				{ this.state.error.length > 0 && <h3 className="error">{this.state.error}</h3>}
 				{ (this.state.projects.length < 1 && !this.state.pending) && <h3 className="info">You don't have any projects yet.</h3>}

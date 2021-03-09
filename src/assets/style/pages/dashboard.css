@@ -5,6 +5,15 @@ section#dashboard {
 }
 section#dashboard h1 {
 	font-size: 50px;
+	margin-bottom: 20px;
+}
+section#dashboard a#create {
+	background: orange;
+	font-size: 20px;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
 }
 section#dashboard h3.loading {
 	font-size: 100px;
