@@ -41,6 +41,7 @@ section#create-project section#form div input, section#create-project section#fo
 	border: 1px solid rgb(228, 228, 228);
 	border-left: 2px solid rgb(172, 172, 172);
 	resize: vertical;
+	background: rgb(245, 245, 245);
 }
 section#create-project button {
 	background: orange;
