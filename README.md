@@ -8,3 +8,4 @@ Taldore is project management system created by [Salint](https://github.com/Sali
 *currently*
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [font-awesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+- [firebase](https://www.npmjs.com/package/firebase)
