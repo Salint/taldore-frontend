@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
 import Dashboard from "./pages/Dashboard";
+import CreateProject from "./pages/CreateProject";
 
 import "./assets/style/master.css";
 
@@ -19,6 +20,7 @@ class Router extends React.Component {
 					<Route exact path="/signup" component={Signup} />
 					<Route exact path="/login" component={Login} />
 					<Route exact path="/projects" component={Dashboard} />
+					<Route exact path="/projects/create" component={CreateProject} />
 				</Switch>
 			</BrowserRouter>
 		)

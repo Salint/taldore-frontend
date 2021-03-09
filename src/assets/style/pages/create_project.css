@@ -1,0 +1,50 @@
+section#create-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 30px auto 0 auto;
+	width: 500px;
+	position: relative;
+}
+section#create-project h1 {
+	font-size: 50px;
+}
+section#create-project section#form {
+	width: 100%;
+	position: relative;
+}
+section#create-project section#form div {
+	width: 100%;
+	margin: 20px 0;
+	position: relative;
+}
+section#create-project section#form div label {
+	font-size: 20px;
+}
+section#create-project section#form div input, section#create-project section#form div textarea {
+	width: 100%;
+	margin: 5px 0;
+	border: none;
+	padding: 10px 15px;
+	font-size: 15px;
+	border-radius: 2px;
+	border: 1px solid rgb(228, 228, 228);
+	border-left: 2px solid rgb(172, 172, 172);
+	resize: vertical;
+}
+section#create-project button {
+	background: orange;
+	font-size: 20px;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+}
+@media (max-width: 800px) {
+	section#create-project {
+		width: 100%;
+	}
+	section#create-project section#form {
+		width: 70%;
+	}
+}
