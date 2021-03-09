@@ -13,6 +13,16 @@ section#create-project section#form {
 	width: 100%;
 	position: relative;
 }
+section#create-project h2.error {
+	color: red;
+	background: rgba(255, 0, 0, 0.2);
+	width: 70%;
+	margin: 20px auto 0 auto;
+	text-align: center;
+	padding: 10px 20px;
+	border: 2px solid red;
+	border-radius: 3px;
+}
 section#create-project section#form div {
 	width: 100%;
 	margin: 20px 0;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { AuthProvider, IfFirebaseAuthed, IfFirebaseUnAuthed } from "../contexts/FirebaseAuthContext";
+import ProjectService from "../services/ProjectService";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -16,6 +17,7 @@ class Prompt extends React.Component {
 			error: "",
 			loading: false,
 			success: false,
+			id: "0",
 			inputs: {
 				name: "",
 				description: ""
@@ -23,6 +25,7 @@ class Prompt extends React.Component {
 		}
 
 		this.handleInputChange = this.handleInputChange.bind(this);
+		this.createProject = this.createProject.bind(this);
 	}
 
 	handleInputChange({ target }) {
@@ -37,18 +40,48 @@ class Prompt extends React.Component {
 
 	}
 
+	createProject() {
+
+		this.setState({
+			loading: true
+		});
+
+		(async () => {
+
+			try {
+
+				const ID = await ProjectService.createProject(this.state.inputs.name, this.state.inputs.description);
+
+				this.setState({
+					loading: false,
+					success: true,
+					id: ID
+				});
+
+			}
+			catch(error) {
+				this.setState({
+					loading: false,
+					error: error.message
+				});
+			}
+
+		})();
+
+	}
 
 	render() {
 
 		return (
 			<section id="create-project">
-
+				{ this.state.success && <Redirect to="/projects" /> }
 				<AuthProvider>
 					<IfFirebaseUnAuthed>
 						<Redirect path="/"/>
 					</IfFirebaseUnAuthed>
 					<IfFirebaseAuthed>
 						<h1>Create a project</h1>
+						{ this.state.error.length > 0 && <h2 class="error">{this.state.error}</h2> }
 						<section id="form">
 							<div>
 								<label>Project Name:</label>
@@ -57,7 +90,7 @@ class Prompt extends React.Component {
 									type="text"
 									name="name"
 									placeholder="super-awesome-game"
-									disabled={this.state.pending}
+									disabled={this.state.loading}
 									onChange={this.handleInputChange}
 								/>
 							</div>
@@ -68,13 +101,14 @@ class Prompt extends React.Component {
 									name="description"
 									placeholder="super-awesome-game is a game that is super awesome but also a game."
 									rows={5}
-									disabled={this.state.pending}
+									disabled={this.state.loading}
 									onChange={this.handleInputChange}
 								/>
 							</div>
 						</section>
 						<button
-							disabled={this.state.pending}
+							disabled={this.state.loading}
+							onClick={this.createProject}
 						>Create Project</button>
 					</IfFirebaseAuthed>
 				</AuthProvider>
