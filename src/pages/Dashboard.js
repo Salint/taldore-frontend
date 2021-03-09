@@ -1,11 +1,15 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import { Redirect } from "react-router-dom";
+import { AuthProvider, IfFirebaseAuthed, IfFirebaseUnAuthed } from "../contexts/FirebaseAuthContext";
+import ProjectService from "../services/ProjectService";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
-import "../assets/style/pages/dashboard.css"
 import Footer from "../components/Footer";
-import ProjectService from "../services/ProjectService";
+import Navbar from "../components/Navbar";
+
+import "../assets/style/pages/dashboard.css"
 
 class Projects extends React.Component {
 
@@ -49,24 +53,32 @@ class Projects extends React.Component {
 
 		return (
 			<section id="dashboard">
-				<h1>Project List</h1>
-				<a href="/projects/create" id="create">Create a Project</a>
-				{ this.state.pending && <h3 className="loading"><FontAwesomeIcon icon={faSyncAlt} /></h3>}
-				{ this.state.error.length > 0 && <h3 className="error">{this.state.error}</h3>}
-				{ (this.state.projects.length < 1 && !this.state.pending) && <h3 className="info">You don't have any projects yet.</h3>}
-				<section id="project-list">
 
-					{
-						this.state.projects.map(project =>
-							<div className="project">
-								<h2>{project.name}</h2>
-								<h3>{project.description}</h3>
-								<p>{project.memberCount} Member</p>
-								<a href={"/project/" + project.id}>View Project</a>
-							</div>)
-					}
+				<AuthProvider>
+					<IfFirebaseUnAuthed>
+						<Redirect path="/"/>
+					</IfFirebaseUnAuthed>
+					<IfFirebaseAuthed>
+						<h1>Project List</h1>
+						<a href="/projects/create" id="create">Create a Project</a>
+						{ this.state.pending && <h3 className="loading"><FontAwesomeIcon icon={faSyncAlt} /></h3>}
+						{ this.state.error.length > 0 && <h3 className="error">{this.state.error}</h3>}
+						{ (this.state.projects.length < 1 && !this.state.pending) && <h3 className="info">You don't have any projects yet.</h3>}
+						<section id="project-list">
 
-				</section>
+							{
+								this.state.projects.map(project =>
+									<div className="project">
+										<h2>{project.name}</h2>
+										<h3>{project.description}</h3>
+										<p>{project.memberCount} Member</p>
+										<a href={"/project/" + project.id}>View Project</a>
+									</div>)
+							}
+
+						</section>
+					</IfFirebaseAuthed>
+				</AuthProvider>
 			</section>
 		)
 
