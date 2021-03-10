@@ -81,7 +81,7 @@ class Prompt extends React.Component {
 					</IfFirebaseUnAuthed>
 					<IfFirebaseAuthed>
 						<h1>Create a project</h1>
-						{ this.state.error.length > 0 && <h2 class="error">{this.state.error}</h2> }
+						{ this.state.error.length > 0 && <h2 className="error">{this.state.error}</h2> }
 						<section id="form">
 							<div>
 								<label>Project Name:</label>

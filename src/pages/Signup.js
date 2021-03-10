@@ -63,9 +63,9 @@ class Form extends React.Component {
 
 	render() {
 		return (
-			<section class="auth-form">
+			<section className="auth-form">
 				<h1>Sign up</h1>
-				{ this.state.error.length > 0 && <h2 class="error">{this.state.error}</h2> }
+				{ this.state.error.length > 0 && <h2 className="error">{this.state.error}</h2> }
 				<div>
 					<input type="text" placeholder="Username" name="username" onChange={this.handleInputChange} disabled={this.state.loading} />
 					<input type="email" placeholder="E-mail" name="email" onChange={this.handleInputChange} disabled={this.state.loading} />
