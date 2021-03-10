@@ -75,7 +75,7 @@ class Form extends React.Component {
 					<button onClick={this.createAccount} disabled={this.state.loading}>Create an Account</button>
 				</div>
 				<p>Already have an account? <a href="/login">Log In</a></p>
-				{ this.state.success && <Redirect path="/app/" /> }
+				{ this.state.success && <Redirect to="/projects/" /> }
 			</section>
 		)
 	}

@@ -56,7 +56,7 @@ class Projects extends React.Component {
 
 				<AuthProvider>
 					<IfFirebaseUnAuthed>
-						<Redirect path="/"/>
+						<Redirect to="/"/>
 					</IfFirebaseUnAuthed>
 					<IfFirebaseAuthed>
 						<h1>Project List</h1>

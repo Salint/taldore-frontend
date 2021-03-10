@@ -77,7 +77,7 @@ class Prompt extends React.Component {
 				{ this.state.success && <Redirect to="/projects" /> }
 				<AuthProvider>
 					<IfFirebaseUnAuthed>
-						<Redirect path="/"/>
+						<Redirect to="/"/>
 					</IfFirebaseUnAuthed>
 					<IfFirebaseAuthed>
 						<h1>Create a project</h1>
