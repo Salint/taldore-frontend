@@ -2,13 +2,13 @@ import firebase from "./FirebaseService";
 
 class ProjectService {
 
-	static async listProjects() {
+	static async listProjects(uid) {
 
 		let projects = [];
 
 		try {
 
-			const results = await firebase.firestore().collection("projects").where("members", "array-contains", firebase.auth().currentUser.uid).get();
+			const results = await firebase.firestore().collection("projects").where("members", "array-contains", uid).get();
 			const docs = results.docs;
 
 			for(let i = 0; i < docs.length; i++) {

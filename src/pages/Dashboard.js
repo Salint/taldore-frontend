@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { AuthProvider, IfFirebaseAuthed, IfFirebaseUnAuthed } from "../contexts/FirebaseAuthContext";
 import ProjectService from "../services/ProjectService";
+import firebase from "../services/FirebaseService";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
@@ -29,7 +30,7 @@ class Projects extends React.Component {
 
 			try {
 
-				const projects = await ProjectService.listProjects();
+				const projects = await ProjectService.listProjects(firebase.auth().currentUser.uid);
 
 				this.setState({
 					pending: false,
