@@ -8,7 +8,7 @@ class ProjectService {
 
 		try {
 
-			const results = await firebase.firestore().collection("posts").where("members", "array-contains", firebase.auth().currentUser.uid).get();
+			const results = await firebase.firestore().collection("projects").where("members", "array-contains", firebase.auth().currentUser.uid).get();
 			const docs = results.docs;
 
 			for(let i = 0; i < docs.length; i++) {
