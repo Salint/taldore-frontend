@@ -29,15 +29,17 @@ class Projects extends React.Component {
 		(async () => {
 
 			try {
+				firebase.auth().onAuthStateChanged(async (user) => {
+					if (user) {
+						const projects = await ProjectService.listProjects(firebase.auth().currentUser.uid);
 
-				const projects = await ProjectService.listProjects(firebase.auth().currentUser.uid);
-
-				this.setState({
-					pending: false,
-					error: "",
-					projects: projects
+						this.setState({
+							pending: false,
+							error: "",
+							projects: projects
+						});
+					}
 				});
-
 			}
 			catch(error) {
 				this.setState({
